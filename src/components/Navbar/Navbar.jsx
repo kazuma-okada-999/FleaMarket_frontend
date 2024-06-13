@@ -1,41 +1,44 @@
 import React from "react";
+import { useRef, useState, useEffect } from "react";
 import { Upload } from "../Upload/Upload.jsx";
 import './Navbar.css'
+import { BrowserRouter, Route, Routes, Link, useNavigate } from "react-router-dom";
+
 
 export const Navbar = (props) => {
-  const { moveHome, refresh } = props;
+  const { moveHome, refresh, search } = props;
+
+  const itemRef = useRef(null);
+  const navigate = useNavigate();
+
+  const clickHandler = () => {
+    search(itemRef.current.value)
+    itemRef.current.value = ''
+  }
+  
 
   return (
     <div className="navbar">
-      <h1 className="navbar-header" onClick={() => moveHome("AllPhotos")}>
+      <h3 className="navbar-header" onClick={() => moveHome("AllPhotos")}>
         おすすめ
-      </h1>
+      </h3>
       <div id="header_search_area" className="pc_only">
-        <form
+        <div
           id="serviceSearchForm"
           className="serviceSearchForm"
-          action="/search"
-          acceptCharset="UTF-8"
-          method="get"
         >
           <input
+          ref={itemRef}
             type="search"
-            id="keyword"
-            name="keyword"
-            placeholder="検索キーワード（商品/出品者名など）を入力"
-            value=""
-            data-action="keydown.enter->product-list-filter#searchProducts"
+            placeholder="検索キーワード（商品）を入力"
           ></input>
           <span className="bg">
-            <input
-              type="button"
+            <button
+             onClick={clickHandler}
               className="submitBtn fa"
-              value="検索する"
-              data-action="click->product-list-filter#searchProducts"
-              aria-hidden="true"
-            ></input>
+            >検索する</button>
           </span>
-        </form>
+        </div>
       </div>
       <Upload refresh={refresh} />
     </div>

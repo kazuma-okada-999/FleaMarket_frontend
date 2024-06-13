@@ -1,0 +1,157 @@
+.serviceSearchForm {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    height: 44px;
+}
+
+form {
+    margin : 0;
+
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+    margin-block-end: 1em;
+}
+
+body {
+    font-family: ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, Osaka, ＭＳ Ｐゴシック, MS PGothic, sans-serif !important;
+    font-size: 16px;
+    color: #404040;
+    font-weight: 400;
+    font-variant: normal;
+    line-height: 1.5em;
+    position: relative;
+    text-align: left;
+    word-break: break-all;
+}
+
+.serviceSearchForm input[type=search] {
+    line-height: 34px;
+    padding: 0 12px;
+    width: 100%;
+    min-width: 100px;
+    max-width: 335px;
+    border-radius: 21px 0 0 21px;
+    border: solid 1px #ccc;
+    border-right: none;
+    color: #404040;
+    font-size: .8125rem;
+}
+
+[type=search] {
+    outline-offset: -2px;
+}
+
+button, input, optgroup, select, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    color: inherit;
+    font: inherit;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    text-align: inherit;
+    text-transform: inherit;
+
+    text-rendering: auto;
+
+    letter-spacing: normal;
+    word-spacing: normal;
+
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+}
+
+
+input[type="search" i] {
+    appearance: auto;
+    box-sizing: border-box;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+
+.serviceSearchForm .bg {
+    display: inline-block;
+    background: #fff;
+    width: 42px;
+    min-width: 42px;
+    border-radius: 0 21px 21px 0;
+    margin: 0 0 0 -4px;
+}
+
+.serviceSearchForm .submitBtn {
+    height: 44px;
+    width: 200%;
+    border-left: none;
+    border-radius: 0 21px 21px 0;
+    color: #fff;
+    text-align: center;
+    background: #006DBB;
+}
+
+
+
+button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled) {
+    cursor: pointer;
+}
+
+
+input:not([type=submit]), textarea, select {
+    font-size: .875rem;
+    line-height: 1.6;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    border-radius: 6px;
+}
+.fa {
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+
+    font-family: var(--fa-style-family, "Font Awesome 6 Pro");
+    font-weight: var(--fa-style, 900);
+}
+
+input {
+    padding: 6px 8px;
+}
+
+
+input[type="button" i] {
+    appearance: auto;
+    user-select: none;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    white-space: pre;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+
+    letter-spacing: normal;
+    word-spacing: normal;
+
+    text-indent: 0px;
+    text-shadow: none;
+
+
+}
+
+
+

@@ -1,0 +1,28 @@
+#content_mainNav .menu_box {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    position: relative;
+    margin: 0 0 0 5px;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+body {
+    font-family: ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, Osaka, ＭＳ Ｐゴシック, MS PGothic, sans-serif !important;
+    font-size: 16px;
+    color: #404040;
+    font-weight: 400;
+    font-variant: normal;
+    line-height: 1.5em;
+    position: relative;
+    text-align: left;
+    word-break: break-all;
+}
+

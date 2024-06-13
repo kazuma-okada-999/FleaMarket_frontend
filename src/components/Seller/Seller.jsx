@@ -10,15 +10,10 @@ export const Seller = (props) => {
   const [image, setImage] = useState();
 
   const navigate = useNavigate();
-
   const itemRef = useRef(null);
-
   const descRef = useRef(null);
-
   const imgRef = useRef(null);
-
   const stockRef = useRef(null);
-
   const priceRef = useRef(null);
 
   const handleFileChange = (event) => {
@@ -51,12 +46,8 @@ export const Seller = (props) => {
 
       itemRef.current.value = "";
     } else if (result.status > 400) {
-      // const jsonResult = await result.json()
-      // console.log(jsonResult)
-      // inputRef.current.value = "送信エラー！";
       console.error(
-        `-エラーステータス : ${result.status}`
-        // `\n-エラーメッセージ : ${jsonResult.error}`
+        `エラーステータス : ${result.status}`
       );
     }
   };

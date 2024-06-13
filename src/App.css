@@ -141,14 +141,14 @@ img {
 }
 
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2{
   margin-top: 0;
   margin-bottom: .5rem;
   font-weight: 500;
   line-height: 1.2;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
   margin: 0;
@@ -170,3 +170,8 @@ h3 {
 }
 
 
+h1 {
+  font-size: 2.5rem; /* 例: 大きなフォントサイズに設定 */
+  font-weight: bold;
+  color: #404040;
+}

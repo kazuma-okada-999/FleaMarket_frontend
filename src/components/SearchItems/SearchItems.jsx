@@ -1,19 +1,19 @@
 import React from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 
-import "./AllItems.css";
+import "./SearchItems.css";
 
 
-export const AllItems = (props) => {
-  const { items, handleClick } = props;
+export const SearchItems = (props) => {
+  const { searchItems, handleClick } = props;
 
-  console.log(items);
+  console.log(searchItems);
 
   return (
     <div className="productList">
-      {items.map((itemObj, index) => (
+      {searchItems.map((itemObj, index) => (
         <section key={index} className="productBox">
-          <Link to="/items/description" className="single" onClick={() => handleClick(items[index])}>
+          <Link to="/items/description" className="single" onClick={() => handleClick(searchItems[index])}>
             <a>
               <div className="detail">
                 <div className="img_wrap">

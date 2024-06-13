@@ -3,7 +3,6 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import reactLogo from '../../assets/react.svg'
 import './Upload.css'
 
-// import {ReactLogo} from '../assets/react.svg';
 
 export const Upload = (props) => {
   const myRef = useRef(null);
