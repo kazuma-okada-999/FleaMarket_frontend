@@ -43,7 +43,7 @@ function App() {
     <>
 
       <Link to="/" className="btn btn_clMain_common btn_service_order">
-        <h1>DIG フリーマーケット</h1>
+        <h1>フリーマーケット</h1>
       </Link>
         <Navbar moveHome={setCurrentView} search={search} />
         <Routes>

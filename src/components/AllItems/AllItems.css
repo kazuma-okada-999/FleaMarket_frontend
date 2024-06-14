@@ -20,8 +20,8 @@
     .productBox {
   
         align-self: stretch;
-        width: calc((100% - 30px) / 4);
-        min-width: calc((100% - 30px) / 4);
+        width: calc((100% - 30px) / 3);
+        min-width: calc((100% - 30px) / 3);
         background-color: #fff;
         border-radius: 6px;
         position: relative;

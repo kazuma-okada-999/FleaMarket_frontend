@@ -206,7 +206,7 @@ article {
 }
 
 
-.productDetail_wrapper {
+/* .productDetail_wrapper {
     display: grid;
     grid-template-columns: 480px 1fr;
     grid-template-rows: auto auto 1fr;
@@ -215,7 +215,7 @@ article {
     box-sizing: border-box;
     border-style: solid;
     border-width: 0;
-}
+} */
 
 .productDetail_imgWrap {
     grid-row: 1 / 4;
