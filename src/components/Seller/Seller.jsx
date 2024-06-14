@@ -159,14 +159,6 @@ export const Seller = (props) => {
         </div>
       </div>
       <div className="sell_btn_container">
-        <input
-          type="submit"
-          name="furima_product[img_url]"
-          // value={imgUrl}
-          className="btn btn_clMain02 submitBtn"
-          data-action="click->sending#submit"
-          data-disable-with="出品する"
-        ></input>
       </div>
       {/* </form> */}
 

@@ -14,6 +14,10 @@ function App() {
   const [selectedItem, setSelectedItem] = useState({});
   const [isSearch, setIsSearch] = useState(false);
   const [searchItems, setSearchItems] = useState([]);
+  const [refresh, setRefresh] = useState(false);
+
+  
+
 
   const navigate = useNavigate();
 
@@ -37,7 +41,7 @@ function App() {
       .then((res) => res.json())
       .then((res) => setItems(res))
       .catch((err) => console.error(err));
-  }, []);
+  }, [refresh]);
   console.log(items);
   return (
     <>
@@ -57,7 +61,7 @@ function App() {
           />
           <Route
             path="/items/description"
-            element={<SingleItem selectedItem={selectedItem} />}
+            element={<SingleItem selectedItem={selectedItem} setRefresh={setRefresh} refresh={refresh} />}
           />
           <Route path="/seller" element={<Seller setItems={setItems} />} />
         </Routes>
