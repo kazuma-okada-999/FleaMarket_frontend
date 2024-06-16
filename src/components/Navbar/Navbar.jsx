@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes, Link, useNavigate } from "react-router-do
 
 
 export const Navbar = (props) => {
-  const { moveHome, refresh, search } = props;
+  const { moveHome, refresh, search, category } = props;
 
   const itemRef = useRef(null);
   const navigate = useNavigate();
@@ -22,6 +22,7 @@ export const Navbar = (props) => {
       <h3 className="navbar-header" onClick={() => moveHome("AllPhotos")}>
         おすすめ
       </h3>
+      <h3 onClick={()=> category('ライト')}>ライト</h3>
       <div id="header_search_area" className="pc_only">
         <div
           id="serviceSearchForm"

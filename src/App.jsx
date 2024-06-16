@@ -7,6 +7,7 @@ import { SingleItem } from "./components/SingleItem/SingleItem.jsx";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Seller } from "./components/Seller/Seller.jsx";
 import { SearchItems } from "./components/SearchItems/SearchItems.jsx";
+import CategoryItems from "./components/CategoryItems/CategoryItems.jsx";
 
 function App() {
   const [currentView, setCurrentView] = useState("AllItems");
@@ -25,6 +26,15 @@ function App() {
     setSelectedItem(item);
     setCurrentView(SingleItem);
   }
+
+  const category = (word) => {
+    const targetWord = new RegExp(`${word}`, "i");
+    const result = items.filter((obj) => {
+      return targetWord.test(obj.item);
+    });
+    setSearchItems(result);
+    navigate("/category");
+  };
 
   const search = (word) => {
     const targetWord = new RegExp(`${word}`, "i");
@@ -49,11 +59,15 @@ function App() {
       <Link to="/" className="btn btn_clMain_common btn_service_order">
         <h1>フリーマーケット</h1>
       </Link>
-        <Navbar moveHome={setCurrentView} search={search} />
+        <Navbar moveHome={setCurrentView} search={search} category={category} />
         <Routes>
           <Route
             path="/"
             element={<AllItems items={items} handleClick={handleClick} />}
+          />
+          <Route
+            path="/category"
+            element={<CategoryItems searchItems={searchItems} handleClick={handleClick} />}
           />
           <Route
             path="/search"
